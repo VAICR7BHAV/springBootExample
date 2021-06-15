@@ -22,6 +22,12 @@ public class WebController {
         return customerRepository.findAll();
     }
 
+    @GetMapping("/test")
+    public String displayTestMessage()
+    {
+        return "This is a test maessage";
+    }
+
     @GetMapping("/find/{id}")
     public Customer findCustomerById(@PathVariable Integer id)
     {
